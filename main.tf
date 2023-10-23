@@ -44,7 +44,7 @@ resource "yandex_compute_instance" "vm-1" {
   }
 }
 
-resource "yandex_vpc_network" "network-1" {
+resource "yandex_vpc_network" "test-1" {
   name = "network-1"
 }
 
@@ -52,7 +52,7 @@ resource "yandex_vpc_subnet" "subnet-1" {
   name           = "subnet1"
   zone           = "ru-central1-a"
   v4_cidr_blocks = ["192.168.10.0/24"]
-  network_id     = "${yandex_vpc_network.network-1.id}"
+  network_id     = "${yandex_vpc_network.test-1.id}"
 }
 
 resource "yandex_compute_instance" "vm-2" {
@@ -84,7 +84,7 @@ resource "yandex_compute_instance" "vm-2" {
   }
 }
 
-resource "yandex_vpc_network" "network-2" {
+resource "yandex_vpc_network" "test-2" {
   name = "network-1"
 }
 
@@ -92,6 +92,6 @@ resource "yandex_vpc_subnet" "subnet-2" {
   name           = "subnet2"
   zone           = "ru-central1-b"
   v4_cidr_blocks = ["192.168.10.0/24"]
-  network_id     = "${yandex_vpc_network.network-1.id}"
+  network_id     = "${yandex_vpc_network.test-2.id}"
 }
 
