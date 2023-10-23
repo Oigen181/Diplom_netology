@@ -29,7 +29,7 @@ resource "yandex_compute_instance" "vm-1" {
 
   boot_disk {
     initialize_params {
-      image_id = "d826honb8s0i1jtt6cg"
+      image_id = "fd8tgblovu5dklvrp29h"
       size     = 10
     }
   }
@@ -57,7 +57,7 @@ resource "yandex_vpc_subnet" "subnet-1" {
 
 resource "yandex_compute_instance" "vm-2" {
 
-  name                      = "linux-vm1"
+  name                      = "linux-vm2"
   allow_stopping_for_update = true
   platform_id               = "standard-v3"
   zone                      = "ru-central1-b"
@@ -69,7 +69,7 @@ resource "yandex_compute_instance" "vm-2" {
 
   boot_disk {
     initialize_params {
-      image_id = "d826honb8s0i1jtt6cg"
+      image_id = "fd8tgblovu5dklvrp29h"
       size     = 10
     }
   }
@@ -85,7 +85,7 @@ resource "yandex_compute_instance" "vm-2" {
 }
 
 resource "yandex_vpc_network" "test-2" {
-  name = "network-1"
+  name = "network-2"
 }
 
 resource "yandex_vpc_subnet" "subnet-2" {
@@ -94,4 +94,5 @@ resource "yandex_vpc_subnet" "subnet-2" {
   v4_cidr_blocks = ["192.168.10.0/24"]
   network_id     = "${yandex_vpc_network.test-2.id}"
 }
+
 
