@@ -12,7 +12,7 @@
 
 ![Снимок экрана от 2023-10-27 20-01-40](https://github.com/Oigen181/Diplom_netology/assets/126493876/0b0986fe-4d34-40b8-b2d4-28414e5421c0)
 
-![Снимок экрана от 2023-10-28 01-19-03](https://github.com/Oigen181/Diplom_netology/assets/126493876/a4f9ef16-56f3-4466-81bd-9d2678186aa9)
+
 
 
 ![Снимок экрана от 2023-10-28 01-27-02](https://github.com/Oigen181/Diplom_netology/assets/126493876/4c0234dd-20e1-4cd8-920d-1bb46ca41a4e)
