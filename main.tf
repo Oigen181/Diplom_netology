@@ -45,7 +45,7 @@ resource "yandex_compute_instance" "vm-1" {
 }
 
 resource "yandex_vpc_network" "test-1" {
-  name = "network-1"
+  name = "networkmy"
 }
 
 resource "yandex_vpc_subnet" "subnet-1" {
@@ -84,19 +84,15 @@ resource "yandex_compute_instance" "vm-2" {
   }
 }
 
-resource "yandex_vpc_network" "test-2" {
-  name = "network-2"
-}
-
 resource "yandex_vpc_subnet" "subnet-2" {
   name           = "subnet2"
   zone           = "ru-central1-b"
   v4_cidr_blocks = ["192.168.10.0/24"]
-  network_id     = "${yandex_vpc_network.test-2.id}"
+  network_id     = "${yandex_vpc_network.test-1.id}"
 }
 
-resource "yandex_alb_target_group" "foo" {
-  name           = "targetgroup"
+resource "yandex_alb_target_group" "targets" {
+  name           = "targetos"
 
   target {
     subnet_id    = yandex_vpc_subnet.subnet-1.id
@@ -109,8 +105,8 @@ resource "yandex_alb_target_group" "foo" {
   }
 }
 
-resource "yandex_alb_backend_group" "test-backend-group" {
-  name                     = "backendgroup"
+resource "yandex_alb_backend_group" "albgroup" {
+  name                     = "albgroup"
   session_affinity {
     connection {
       source_ip = true
@@ -121,7 +117,7 @@ resource "yandex_alb_backend_group" "test-backend-group" {
     name                   = "back1"
     weight                 = 1
     port                   = 80
-    target_group_ids       = ["${yandex_alb_target_group.foo.id}"]
+    target_group_ids       = ["${yandex_alb_target_group.targets.id}"]
     load_balancing_config {
       panic_threshold      = 90
     }
@@ -139,17 +135,17 @@ resource "yandex_alb_backend_group" "test-backend-group" {
 
 
 resource "yandex_alb_http_router" "router-1" {
-  name          = "router-1"
+  name          = "router-12"
 }
 
-resource "yandex_alb_virtual_host" "virthost" {
+resource "yandex_alb_virtual_host" "vh-1" {
   name                    = "vh-1"
-  http_router_id          = yandex_alb_http_router.router-1.id
+  http_router_id          = "${yandex_alb_http_router.router-1.id}"
   route {
-    name                  = "route-1"
+    name                  = "myroute"
     http_route {
       http_route_action {
-        backend_group_id  = "{yandex_alb_backend_group.back1.id}"
+        backend_group_id  = "${yandex_alb_backend_group.albgroup.id}"
         timeout           = "60s"
       }
     }
@@ -159,17 +155,12 @@ resource "yandex_alb_virtual_host" "virthost" {
 
 resource "yandex_alb_load_balancer" "balancertest" {
   name        = "alb-1"
-  network_id  = "{yandex_vpc_network.network-1.id}"
+  network_id  = "${yandex_vpc_network.test-1.id}"
 
   allocation_policy {
     location {
       zone_id   = "ru-central1-a"
-      subnet_id = "{yandex_vpc_subnet.subnet-1.id}" 
-    }
-    
-    location {
-      zone_id   = "ru-central1-b"
-      subnet_id = "{yandex_vpc_subnet.subnet-2.id}"
+      subnet_id = "${yandex_vpc_subnet.subnet-1.id}" 
     }
   }
 
