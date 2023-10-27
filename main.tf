@@ -87,7 +87,7 @@ resource "yandex_compute_instance" "vm-2" {
 resource "yandex_vpc_subnet" "subnet-2" {
   name           = "subnet2"
   zone           = "ru-central1-b"
-  v4_cidr_blocks = ["192.168.10.0/24"]
+  v4_cidr_blocks = ["192.168.20.0/24"]
   network_id     = "${yandex_vpc_network.test-1.id}"
 }
 
@@ -135,7 +135,7 @@ resource "yandex_alb_backend_group" "albgroup" {
 
 
 resource "yandex_alb_http_router" "router-1" {
-  name          = "router-12"
+  name          = "router-1"
 }
 
 resource "yandex_alb_virtual_host" "vh-1" {
@@ -152,6 +152,13 @@ resource "yandex_alb_virtual_host" "vh-1" {
   }
 }  
 
+resource "yandex_vpc_subnet" "subnet-3" {     
+  name           = "subnetinside" 
+  description    = "balancersub"
+  zone           = "ru-central1-c" 
+  network_id     = "${yandex_vpc_network.test-1.id}" 
+  v4_cidr_blocks = ["192.168.30.0/24"]
+}
 
 resource "yandex_alb_load_balancer" "balancertest" {
   name        = "alb-1"
@@ -159,8 +166,8 @@ resource "yandex_alb_load_balancer" "balancertest" {
 
   allocation_policy {
     location {
-      zone_id   = "ru-central1-a"
-      subnet_id = "${yandex_vpc_subnet.subnet-1.id}" 
+      zone_id   = "ru-central1-c"
+      subnet_id = "${yandex_vpc_subnet.subnet-3.id}" 
     }
   }
 
@@ -175,7 +182,7 @@ resource "yandex_alb_load_balancer" "balancertest" {
     }
     http {
       handler {
-        http_router_id = "{yandex_alb_http_router.router-1.id}"
+        http_router_id = "${yandex_alb_http_router.router-1.id}"
       }
     }
   }
