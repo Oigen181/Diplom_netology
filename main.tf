@@ -186,3 +186,138 @@ resource "yandex_alb_load_balancer" "balancertest" {
     }
   }
 }
+
+##----------------- prometheus -----------------------------
+resource "yandex_compute_instance" "prometheus" {
+  name        = "vm-prometheus"
+  hostname    = "prometheus"
+  zone        = "ru-central1-a"
+
+  resources {
+    cores  = 2
+    memory = 2
+    core_fraction = 20
+  }
+
+  boot_disk {
+    initialize_params {
+      image_id = "fd8tgblovu5dklvrp29h" 
+      size = 10
+    }
+  }
+
+  network_interface {
+    subnet_id          = yandex_vpc_subnet.subnet-1.id
+    nat                = true 
+  }
+
+  metadata = {
+    user-data = "${file("./meta.yaml")}"
+  }
+
+  scheduling_policy {  
+    preemptible = true
+  }
+}
+
+#----------------- grafana -----------------------------
+resource "yandex_compute_instance" "grafana" {
+  name        = "vm-grafana"
+  hostname    = "grafana"
+  zone        = "ru-central1-a"
+
+  resources {
+    cores  = 2
+    memory = 2
+    core_fraction = 20
+  }
+
+  boot_disk {
+    initialize_params {
+      image_id = "fd8tgblovu5dklvrp29h"
+    }
+  }
+
+  network_interface {
+    subnet_id          = yandex_vpc_subnet.subnet-1.id
+    nat                = true
+    security_group_ids = 
+    ip_address         = 
+  }
+
+  metadata = {
+    user-data = "${file("./meta.yaml")}"
+  }
+
+  scheduling_policy {  
+    preemptible = true
+  }
+}
+
+#----------------- elastic -----------------------------
+resource "yandex_compute_instance" "elastic" {
+  name        = "vm-elastic"
+  hostname    = "elastic"
+  zone        = "ru-central1-a"
+
+  resources {
+    cores  = 2
+    memory = 4
+    core_fraction = 20
+  }
+
+  boot_disk {
+    initialize_params {
+      image_id = "fd8tgblovu5dklvrp29h"
+      size     = 6
+    }
+  }
+
+  network_interface {
+    subnet_id          = yandex_vpc_subnet.subnet-1.id
+    security_group_ids = 
+    ip_address         = "10.0.3.4"
+  }
+
+  metadata = {
+    user-data = "${file("./meta.yaml")}"
+  }
+
+  scheduling_policy {  
+    preemptible = true
+  }
+}
+
+#----------------- kibana -----------------------------
+resource "yandex_compute_instance" "kibana" {
+  name        = "vm-kibana"
+  hostname    = "kibana"
+  zone        = "ru-central1-c"
+
+  resources {
+    cores  = 2
+    memory = 2
+    core_fraction = 20
+  }
+
+  boot_disk {
+    initialize_params {
+      image_id = "fd8tgblovu5dklvrp29h" 
+    }
+  }
+
+  network_interface {
+    subnet_id          = yandex_vpc_subnet.subnet-1.id
+    nat                = true
+    security_group_ids = 
+    ip_address         = 
+  }
+
+  metadata = {
+    user-data = "${file("./meta.yaml")}"
+  }
+
+  scheduling_policy {  
+    preemptible = true
+  }
+}
