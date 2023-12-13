@@ -70,5 +70,33 @@ https://losst.pro/ustanovka-i-nastrojka-prometheus?ysclid=lq3sjayvoo845126530
 
 Установка Графаны и настройка дашборда согласно условиям
 
+![Скриншот 07-12-2023 170629](https://github.com/Oigen181/Diplom_netology/assets/126493876/2c8e0736-fa90-4de6-a949-1bd8dc288e5f)
+
+Проверяем доступность наших серверов и загружаем готовый дашборд как раз для наших нужд
+
+
+![Скриншот 07-12-2023 220514](https://github.com/Oigen181/Diplom_netology/assets/126493876/ed17b232-9fad-4887-9ff2-d787568d15ee)
+
+
+![Скриншот 07-12-2023 220545](https://github.com/Oigen181/Diplom_netology/assets/126493876/73ccf4eb-07a7-4a24-b051-609cb3b028a4)
+
+---
+
+### 3. Логи
+
+---
+
+Установка Kibana и Elasticsearch
+
+Самое проблематичное это установка Elasticsearch, но мне помог этот ресурс:
+https://itobereg.ru/services/install-elasticsearch?ysclid=lq3ts20q98643535193
+
+
+![Скриншот 07-12-2023 202453](https://github.com/Oigen181/Diplom_netology/assets/126493876/c442d0f6-b5d3-4b91-af84-e4a360df0ca2)
+
+
+![Скриншот 07-12-2023 194344](https://github.com/Oigen181/Diplom_netology/assets/126493876/099f9c8a-1208-4120-9f5f-8d85df742e54)
+
+
 
 
