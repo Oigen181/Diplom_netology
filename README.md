@@ -57,5 +57,18 @@ https://losst.pro/ustanovka-i-nastrojka-prometheus?ysclid=lq3sjayvoo845126530
 ![Скриншот 07-12-2023 164407](https://github.com/Oigen181/Diplom_netology/assets/126493876/7148a353-7b71-4870-8356-4f036380a046)
 
 
+Также ставим на наши веб сервера prometheus-nginxlog-exporter 
+
+![Скриншот 07-12-2023 165724](https://github.com/Oigen181/Diplom_netology/assets/126493876/d41d2037-bb92-4d15-bc03-860393c3880b)
+
+![Скриншот 07-12-2023 165846](https://github.com/Oigen181/Diplom_netology/assets/126493876/47c4cd04-b556-451f-9a0b-a43ee137823a)
+
+Проверяем и заходим по внешнему ip адресу на Prometheus.
+
+
+![Скриншот 07-12-2023 165911](https://github.com/Oigen181/Diplom_netology/assets/126493876/0ece1893-99e8-4589-bfbb-10f0ac4633ec
+
+Установка Графаны и настройка дашборда согласно условиям
+
 
 
