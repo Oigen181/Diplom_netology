@@ -92,7 +92,8 @@ https://losst.pro/ustanovka-i-nastrojka-prometheus?ysclid=lq3sjayvoo845126530
 https://itobereg.ru/services/install-elasticsearch?ysclid=lq3ts20q98643535193
 
 
-![Скриншот 07-12-2023 202453](https://github.com/Oigen181/Diplom_netology/assets/126493876/c442d0f6-b5d3-4b91-af84-e4a360df0ca2)
+![Скриншот 07-12-2023 193742](https://github.com/Oigen181/Diplom_netology/assets/126493876/25dfa32d-6695-4072-9bf3-963452f6f045)
+
 
 
 ![Скриншот 07-12-2023 194344](https://github.com/Oigen181/Diplom_netology/assets/126493876/099f9c8a-1208-4120-9f5f-8d85df742e54)
