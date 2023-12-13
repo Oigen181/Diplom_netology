@@ -90,6 +90,8 @@ https://losst.pro/ustanovka-i-nastrojka-prometheus?ysclid=lq3sjayvoo845126530
 
 Самое проблематичное это установка Elasticsearch, но мне помог этот ресурс:
 https://itobereg.ru/services/install-elasticsearch?ysclid=lq3ts20q98643535193
+C Kibana примерно тоже самое.
+
 
 
 ![Скриншот 07-12-2023 193742](https://github.com/Oigen181/Diplom_netology/assets/126493876/25dfa32d-6695-4072-9bf3-963452f6f045)
@@ -99,5 +101,13 @@ https://itobereg.ru/services/install-elasticsearch?ysclid=lq3ts20q98643535193
 ![Скриншот 07-12-2023 194344](https://github.com/Oigen181/Diplom_netology/assets/126493876/099f9c8a-1208-4120-9f5f-8d85df742e54)
 
 
+![Скриншот 07-12-2023 194739](https://github.com/Oigen181/Diplom_netology/assets/126493876/3fe502ef-8e54-4182-96ac-35c4876dd44c)
 
 
+Подключаемся и проверяем подключение к Elasticsearch
+
+![Скриншот 07-12-2023 201504](https://github.com/Oigen181/Diplom_netology/assets/126493876/3c485f4c-4a7b-4c26-ae99-bf2615427c5b)
+
+
+
+![Скриншот 07-12-2023 201600](https://github.com/Oigen181/Diplom_netology/assets/126493876/9134b392-714d-4e8d-8b53-988254c7ce53)
