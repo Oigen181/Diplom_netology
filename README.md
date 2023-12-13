@@ -90,7 +90,7 @@ https://losst.pro/ustanovka-i-nastrojka-prometheus?ysclid=lq3sjayvoo845126530
 
 Самое проблематичное это установка Elasticsearch, но мне помог этот ресурс:
 https://itobereg.ru/services/install-elasticsearch?ysclid=lq3ts20q98643535193
-C Kibana примерно тоже самое.
+C Kibana и Filebit примерно тоже самое.
 
 
 
@@ -111,3 +111,69 @@ C Kibana примерно тоже самое.
 
 
 ![Скриншот 07-12-2023 201600](https://github.com/Oigen181/Diplom_netology/assets/126493876/9134b392-714d-4e8d-8b53-988254c7ce53)
+
+Установка Filebit
+
+
+![Скриншот 07-12-2023 202453](https://github.com/Oigen181/Diplom_netology/assets/126493876/3affd608-0d8c-48ed-b54f-bd3375352963)
+
+Переходим по внешнему ip и проверяем логи по нашим серверам 
+
+![Скриншот 07-12-2023 204422](https://github.com/Oigen181/Diplom_netology/assets/126493876/a5af07d5-6b39-4560-866d-aedb0abfff66)
+
+
+![Скриншот 07-12-2023 204447](https://github.com/Oigen181/Diplom_netology/assets/126493876/d4fdc5b7-f01a-4e49-827a-aede8629394b)
+
+---
+
+### 4.Сеть
+
+---
+
+Настройка групп безоапасности согласно заданным условиям. Изначально это можно было задать через terraform, но очень хотелось попользоваться интерфейсом Yandex cloud.
+
+Подключение по SSH: 
+
+![Скриншот 11-12-2023 173032](https://github.com/Oigen181/Diplom_netology/assets/126493876/c6920f41-73a5-4b2a-9ed8-a8f6e7f0d075)
+
+
+![Скриншот 11-12-2023 173040](https://github.com/Oigen181/Diplom_netology/assets/126493876/15c17642-628f-4893-8a24-89f237e28760)
+
+Подключение Private group 
+
+![Скриншот 11-12-2023 173005](https://github.com/Oigen181/Diplom_netology/assets/126493876/2e5168a1-3600-4e88-9b07-0faa322c4475)
+
+
+![Скриншот 11-12-2023 173017](https://github.com/Oigen181/Diplom_netology/assets/126493876/151a10be-a735-4cc8-8ac2-c7a41d032252)
+
+Подключение Public group
+
+![Скриншот 11-12-2023 173103](https://github.com/Oigen181/Diplom_netology/assets/126493876/ad7b373f-e4f1-4a9b-b370-73afa9e3f1df)
+
+
+![Скриншот 11-12-2023 173055](https://github.com/Oigen181/Diplom_netology/assets/126493876/8b89d38a-57e2-434b-99fb-f2391fd374fe)
+
+---
+
+### 5. Резервное копирование
+
+--- 
+
+Создание снимков расписания:
+
+
+![Скриншот 11-12-2023 173741](https://github.com/Oigen181/Diplom_netology/assets/126493876/f45f4635-f31e-4ffa-a0d2-f13021360990)
+
+
+![Скриншот 11-12-2023 173756](https://github.com/Oigen181/Diplom_netology/assets/126493876/6990b82a-7673-42ec-a047-39b12589c094)
+
+---
+
+### 6. Заключение
+
+----
+
+Не скажу, что работа была легкой, приходилось очень много искать ошибок в процессе построения и развертования инфраструктуры. На самом деле ресурсов очень много и могут завести не туда, но наверно в том и заключается работа системного администратора уметь разбираться в огромном потоке информации и правильно принимать решения. 
+Спасибо Нетологии за обучение!
+
+
