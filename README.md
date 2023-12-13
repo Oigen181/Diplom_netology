@@ -65,6 +65,8 @@ https://losst.pro/ustanovka-i-nastrojka-prometheus?ysclid=lq3sjayvoo845126530
 
 Проверяем и заходим по внешнему ip адресу на Prometheus.
 
+![Скриншот 07-12-2023 165911](https://github.com/Oigen181/Diplom_netology/assets/126493876/a4848b8c-9ee1-4dae-ad0f-148a6f6d77bf)
+
 
 Установка Графаны и настройка дашборда согласно условиям
 
