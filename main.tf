@@ -187,7 +187,7 @@ resource "yandex_alb_load_balancer" "balancertest" {
   }
 }
 
-##----------------- prometheus -----------------------------
+#prometheus 
 resource "yandex_compute_instance" "prometheus" {
   name        = "vm-prometheus"
   hostname    = "prometheus"
@@ -220,7 +220,7 @@ resource "yandex_compute_instance" "prometheus" {
   }
 }
 
-#----------------- grafana -----------------------------
+#grafana
 resource "yandex_compute_instance" "grafana" {
   name        = "vm-grafana"
   hostname    = "grafana"
@@ -254,7 +254,7 @@ resource "yandex_compute_instance" "grafana" {
   }
 }
 
-#----------------- elastic -----------------------------
+#elastic
 resource "yandex_compute_instance" "elastic" {
   name        = "vm-elastic"
   hostname    = "elastic"
@@ -288,7 +288,7 @@ resource "yandex_compute_instance" "elastic" {
   }
 }
 
-#----------------- kibana -----------------------------
+#kibana
 resource "yandex_compute_instance" "kibana" {
   name        = "vm-kibana"
   hostname    = "kibana"
